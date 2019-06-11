@@ -2,18 +2,41 @@ package wcci.reviewssite;
 
 public class Review {
 	
-	private int id;
+	private long id;
+	private String title;
+	private String imageUrl;
+	private String reviewCategory;
+	private String reviewContent;
 
-	public Review(int id) {
+	public Review(long id, String title, String imageUrl, String reviewCategory, String reviewContent) {
 		this.id = id;
+		this.title = title;
+		this.imageUrl = imageUrl;
+		this.reviewCategory = reviewCategory;
+		this.reviewContent = reviewContent;
 		
 	}
 
-	public int getID() {
+	public long getID() {
 		
 		return id;
 	}
 	
+	public String getTitle() {
+		return title;
+	}
+	
+	public String getImageUrl() {
+		return imageUrl;
+	}
+	
+	public String getReviewCategory() {
+		return reviewCategory;
+	}
+	
+	public String getReviewContent() {
+		return reviewContent;
+	}
 	
 
 }
