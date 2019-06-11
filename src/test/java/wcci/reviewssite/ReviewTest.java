@@ -11,7 +11,7 @@ public class ReviewTest {
 	public void reviewShouldHaveIDOf1() {
 		Review reviewTest = new Review(1, "title", "","","");
 		long expectedID = reviewTest.getID();
-		  assertEquals(1, expectedID);
+		  assertEquals(1L, expectedID);
 		
 	}
 	
@@ -19,7 +19,7 @@ public class ReviewTest {
 	public void reviewShouldHaveIDOf2() {
 		Review reviewTest = new Review(2, "title", "","","");
 		long expectedID = reviewTest.getID();
-		  assertEquals(2, expectedID);
+		  assertEquals(2L, expectedID);
 	}
 	
 	@Test

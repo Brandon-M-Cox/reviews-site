@@ -10,7 +10,7 @@ public class RepositoryTest {
 	public void repositoryContainsMultipleReviews() {
 		Repository underTest = new Repository();
 		int numberOfReviews = underTest.getReviews();
-		underTest.addReview(1);
+		underTest.put(1);
 		assertEquals(numberOfReviews, 2);
 		
 		
