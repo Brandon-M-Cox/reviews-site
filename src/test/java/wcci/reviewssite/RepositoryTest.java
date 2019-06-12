@@ -6,14 +6,5 @@ import org.junit.Test;
 
 public class RepositoryTest {
 	
-	@Test
-	public void repositoryContainsMultipleReviews() {
-		Repository underTest = new Repository();
-		int numberOfReviews = underTest.getReviews();
-		underTest.put(1);
-		assertEquals(numberOfReviews, 2);
-		
-		
-	}
-
 }
+	
