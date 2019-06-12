@@ -8,11 +8,12 @@
   </head>
   <body>
     <div>
-      <h2>ID</h2>
-      <h3>Title</h3>
-      <p>ImageURL</p>
-      <p>Category</p>
-      <p>Content</p>
+      <h2 th:text="${review.id}">ID</h2>
+      <h3 th:text="${review.title}">Title</h3>
+      <p th:text="${review.imageUrl}">ImageURL</p>
+      <p th:text="${review.category}">Category</p>
+      <p th:text="${review.content}">Content</p>
+      <a href="./reviews.html">Back To reviews</a>
     </div>
   </body>
 </html>
