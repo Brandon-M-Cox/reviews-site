@@ -5,16 +5,15 @@ public class Review {
 	private long id;
 	private String title;
 	private String imageUrl;
-	//remove review from variables below
-	private String reviewCategory;
-	private String reviewContent;
+	private String category;
+	private String content;
 
-	public Review(long id, String title, String imageUrl, String reviewCategory, String reviewContent) {
+	public Review(long id, String title, String imageUrl, String category, String content) {
 		this.id = id;
 		this.title = title;
 		this.imageUrl = imageUrl;
-		this.reviewCategory = reviewCategory;
-		this.reviewContent = reviewContent;
+		this.category = category;
+		this.content = content;
 		
 	}
 
@@ -32,11 +31,11 @@ public class Review {
 	}
 	
 	public String getReviewCategory() {
-		return reviewCategory;
+		return category;
 	}
 	
 	public String getReviewContent() {
-		return reviewContent;
+		return content;
 	}
 	
 
