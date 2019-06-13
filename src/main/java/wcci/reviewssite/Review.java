@@ -5,6 +5,7 @@ public class Review {
 	private long id;
 	private String title;
 	private String imageUrl;
+	//remove review from variables below
 	private String reviewCategory;
 	private String reviewContent;
 
