@@ -12,7 +12,7 @@ public class ReviewTest {
 	public void reviewShouldHaveAllValues() {
 		Review reviewTest = new Review(0, "title", "url", "cat", "con");
 		String expectedReviewContent = reviewTest.getReviewContent();
-		long expectedID = reviewTest.getID();
+		long expectedID = reviewTest.getId();
 		String expectedTitle = reviewTest.getTitle();
 		String expectedImageUrl = reviewTest.getImageUrl();
 		String expectedReviewCategory = reviewTest.getReviewCategory();
@@ -28,7 +28,7 @@ public class ReviewTest {
 	public void reviewShouldHaveDifferentValues() {
 		Review reviewTest = new Review(2, "title2", "url2", "cat2", "con2");
 		String expectedReviewContent = reviewTest.getReviewContent();
-		long expectedID = reviewTest.getID();
+		long expectedID = reviewTest.getId();
 		String expectedTitle = reviewTest.getTitle();
 		String expectedImageUrl = reviewTest.getImageUrl();
 		String expectedReviewCategory = reviewTest.getReviewCategory();
