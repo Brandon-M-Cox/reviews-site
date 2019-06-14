@@ -17,7 +17,7 @@ public class Review {
 		
 	}
 
-	public long getID() {
+	public long getId() {
 		
 		return id;
 	}
