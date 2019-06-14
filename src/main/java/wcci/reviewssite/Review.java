@@ -30,11 +30,11 @@ public class Review {
 		return imageUrl;
 	}
 	
-	public String getReviewCategory() {
+	public String getCategory() {
 		return category;
 	}
 	
-	public String getReviewContent() {
+	public String getContent() {
 		return content;
 	}
 	
