@@ -1,4 +1,4 @@
-package wcci.reviewssite;
+package Integration_Tests;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

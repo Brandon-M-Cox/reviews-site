@@ -1,7 +1,7 @@
 package wcci.reviewssite;
 
 public class Review {
-	
+
 	private long id;
 	private String title;
 	private String imageUrl;
@@ -14,29 +14,32 @@ public class Review {
 		this.imageUrl = imageUrl;
 		this.category = category;
 		this.content = content;
-		
+
+	}
+
+	public Review(long id) {
+		this.id = id;
 	}
 
 	public long getId() {
-		
+
 		return id;
 	}
-	
+
 	public String getTitle() {
 		return title;
 	}
-	
+
 	public String getImageUrl() {
 		return imageUrl;
 	}
-	
+
 	public String getCategory() {
 		return category;
 	}
-	
+
 	public String getContent() {
 		return content;
 	}
-	
 
 }
