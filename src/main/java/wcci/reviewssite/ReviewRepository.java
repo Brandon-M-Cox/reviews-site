@@ -2,7 +2,6 @@ package wcci.reviewssite;
 
 import java.util.Collection;
 
-
 import java.util.HashMap;
 import java.util.Map;
 
@@ -26,6 +25,10 @@ public class ReviewRepository {
 
 	public Collection<Review> findAllReviews() {
 		return reviewMap.values();
+	}
+
+	public void add(Review review) {
+		reviewMap.put(review.getId(), review);
 	}
 
 }
