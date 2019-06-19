@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 public class Initializer implements CommandLineRunner {
 
 	@Autowired
-	private ReviewsRepository reviewsRepo;
+	private ReviewRepository reviewRepo;
 	
 	@Autowired
 	private CategoryRepository categoryRepo;
@@ -21,10 +21,10 @@ public class Initializer implements CommandLineRunner {
 		Category cleveland = new Category("Cleveland");
 		categoryRepo.save(cleveland);
 
-		Review review1 = new Review(1L, "title", "url", "cat", "con");
-		reviewsRepo.save(review1);
-		reviewsRepo.save(new Review(1L, "title", "url", "cat", "con"));
-		reviewsRepo.save(new Review(1L, "title", "url", "cat", "con"));
+		reviewRepo.save(new Review(1L, "title", "url", cBus, "con"));
+		reviewRepo.save(new Review(2L, "title", "url", cBus, "con"));
+		reviewRepo.save(new Review(3L, "title", "url", cBus, "con"));
+
 
 	}
 }

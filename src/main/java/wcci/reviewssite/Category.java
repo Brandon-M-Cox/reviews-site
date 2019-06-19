@@ -17,7 +17,6 @@ public class Category {
 	private Long id;
 	
 	@OneToMany(mappedBy = "category")
-	
 	private Collection<Review> reviews;
 	
 	public String getName() {
