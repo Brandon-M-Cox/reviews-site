@@ -12,6 +12,7 @@ import org.springframework.boot.test.autoconfigure.orm.jpa.TestEntityManager;
 import org.springframework.test.context.junit4.SpringRunner;
 
 import wcci.reviewssite.CategoryRepository;
+import wcci.reviewssite.ReviewsRepository;
 
 import static org.assertj.core.api.Assertions.*;
 
@@ -26,6 +27,7 @@ public class EntityMappingsTest {
 	private CategoryRepository categoryRepo;
 
 	@Autowired
-	private ReviewRepository ReviewRepo;
+	private ReviewsRepository reviewsRepo;
+	
 	
 }
