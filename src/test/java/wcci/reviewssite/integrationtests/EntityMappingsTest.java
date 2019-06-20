@@ -1,4 +1,4 @@
-package Integration_Tests;
+package wcci.reviewssite.integrationtests;
 import static org.hamcrest.CoreMatchers.is;
 import static org.hamcrest.Matchers.containsInAnyOrder;
 import static org.junit.Assert.assertThat;
