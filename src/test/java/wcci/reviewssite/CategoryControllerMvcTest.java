@@ -1,4 +1,4 @@
-package Integration_Tests;
+package wcci.reviewssite;
 import static org.hamcrest.CoreMatchers.is;
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;

@@ -1,3 +1,4 @@
+package wcci.reviewssite.integrationtests;
 
 import static org.hamcrest.CoreMatchers.containsString;
 
