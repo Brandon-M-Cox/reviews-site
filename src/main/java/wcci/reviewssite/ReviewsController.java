@@ -19,18 +19,18 @@ public class ReviewsController {
 
 	@RequestMapping("/")
 	public String getReviews(Model model) {
-		model.addAttribute("reviews", reviews.findAllReviews());
+		model.addAttribute("reviews", reviews.findAll());
 		return "reviews";
 	}
 
 	@RequestMapping("/{id}")
 	public String getReview(@PathVariable("id") long id, Model model) {
-		model.addAttribute("review", reviews.findReview(id));
+		model.addAttribute("review", reviews.findById(id));
 		return "review";
 	}
 	@PostMapping("/add")
-	public String addReview(Long id, String title, String category, String content, String imageUrl) {
-		reviews.add(new Review(id, title, category, content, imageUrl));
+	public String addReview(Long id, String title, String imageUrl, Category category, String content) {
+		reviews.save(new Review(id, title, imageUrl, category, content));
 		return "redirect:/reviews/";
 	}
 
