@@ -22,7 +22,7 @@ public class Initializer implements CommandLineRunner {
 		categoryRepo.save(cleveland);
 
 		reviewRepo.save(new Review(1L, "title", "url", cBus, "con"));
-		reviewRepo.save(new Review(2L, "title", "url", cBus, "con"));
+		reviewRepo.save(new Review(2L, "title", "url", cleveland, "con"));
 		reviewRepo.save(new Review(3L, "title", "url", cBus, "con"));
 
 
