@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Categories</title>
+</head>
+<body>
+    <div class="categories">
+        <h2 th:each="category: ${categories}">
+        <h2 class="categories__name" th:text="${category.name}">Name</h2> 
+        
+            <a th:text= "${category.name}" th:href="|/categories/${Category.name}|">Category Name/a></h2>          
+    </div>
+      <footer class="footer">
+        <small class="footer__copy"> &copy;2019 Acquisitions Inc. </small>
+      </footer>
+    </div>  
+</body>
+</html>

@@ -13,19 +13,19 @@ public class CategoryController {
 	@Resource
 	private CategoryRepository categoryRepo;
 	
-	@RequestMapping("/all-categorys")
+	@RequestMapping("/categories")
 	public String findAll(Model model) {
-		model.addAttribute("categorysAttribute", categoryRepo.findAll());
-		return "categorysTemplate";
+		model.addAttribute("categoriesAttribute", categoryRepo.findAll());
+		return "categories";
 	}
 	
-	@PostMapping("/add-category")
-	public String addCategory(String name) {
-		Category categoryToAdd = new Category(name);
-		
-		if(categoryRepo.findByName(categoryToAdd.getName()) == null) {
-			categoryRepo.save(categoryToAdd);
-		}
-		return "redirect:/all-categorys";
-	}
+//	@PostMapping("/add-category")
+//	public String addCategory(String name) {
+//		Category categoryToAdd = new Category(name);
+//		
+//		if(categoryRepo.findByName(categoryToAdd.getName()) == null) {
+//			categoryRepo.save(categoryToAdd);
+//		}
+//		return "redirect:/all-categorys";
+//	}
 }
