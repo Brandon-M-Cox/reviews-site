@@ -10,14 +10,14 @@ import javax.persistence.OneToMany;
 @Entity
 public class Category {
 	
+	@OneToMany(mappedBy = "category")
+	private Collection<Review> reviews;
+	
 	private String name;
 	
 	@Id
 	@GeneratedValue
 	private Long id;
-	
-	@OneToMany(mappedBy = "category")
-	private Collection<Review> reviews;
 	
 	public String getName() {
 		return name;

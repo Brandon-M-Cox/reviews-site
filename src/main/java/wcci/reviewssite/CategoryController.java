@@ -15,10 +15,11 @@ public class CategoryController {
 	
 	@RequestMapping("/categories")
 	public String findAll(Model model) {
-		model.addAttribute("categoriesAttribute", categoryRepo.findAll());
+		model.addAttribute("categories", categoryRepo.findAll());
 		return "categories";
 	}
-	
+
+}
 //	@PostMapping("/add-category")
 //	public String addCategory(String name) {
 //		Category categoryToAdd = new Category(name);
@@ -28,4 +29,4 @@ public class CategoryController {
 //		}
 //		return "redirect:/all-categorys";
 //	}
-}
+
