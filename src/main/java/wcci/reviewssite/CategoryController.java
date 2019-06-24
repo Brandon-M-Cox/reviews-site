@@ -27,16 +27,17 @@ public class CategoryController {
 	}
 	
 	@RequestMapping("/{name}") 
-	public String getCategory(@PathVariable("name") String name, Model model) {
-		model.addAttribute("review", reviewfindOne.));
+	public String findAllReviews(Model model){
+		model.addAttribute("category", reviewRepo.findAll());
 		return "category";
 	}
-}
+
+
 		
 	
 	
 	
-}
+
 //	@PostMapping("/add-category")
 //	public String addCategory(String name) {
 //		Category categoryToAdd = new Category(name);
@@ -46,4 +47,4 @@ public class CategoryController {
 //		}
 //		return "redirect:/all-categorys";
 //	}
-
+	}
