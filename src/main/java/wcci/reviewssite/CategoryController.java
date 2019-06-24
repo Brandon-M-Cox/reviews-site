@@ -4,9 +4,6 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-
-import org.springframework.web.bind.annotation.PathVariable;
-
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -28,7 +25,7 @@ public class CategoryController {
 	
 	@RequestMapping("/{name}") 
 	public String findAllReviews(Model model){
-		model.addAttribute("category", reviewRepo.findAll());
+		model.addAttribute("reviews", reviewRepo.findAll());
 		return "category";
 	}
 
