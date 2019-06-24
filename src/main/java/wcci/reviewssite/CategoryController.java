@@ -4,6 +4,7 @@ import javax.annotation.Resource;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -12,28 +13,22 @@ public class CategoryController {
 
 	@Resource
 	private CategoryRepository categoryRepo;
-	
+
 	@Resource
 	private ReviewRepository reviewRepo;
-	
+
 	@RequestMapping("/")
 	public String findAll(Model model) {
 		model.addAttribute("categories", categoryRepo.findAll());
 		return "categories";
-		
+
 	}
-	
-	@RequestMapping("/{name}") 
-	public String findAllReviews(Model model){
-		model.addAttribute("reviews", reviewRepo.findAll());
+
+	@RequestMapping("/{name}")
+	public String findAllReviews(@PathVariable String name, Model model) {
+		model.addAttribute("category", categoryRepo.findByName(name));
 		return "category";
 	}
-
-
-		
-	
-	
-	
 
 //	@PostMapping("/add-category")
 //	public String addCategory(String name) {
@@ -44,4 +39,4 @@ public class CategoryController {
 //		}
 //		return "redirect:/all-categorys";
 //	}
-	}
+}

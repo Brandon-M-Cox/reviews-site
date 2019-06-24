@@ -16,7 +16,7 @@
       <h1>WeCanCodeIT Review Repository</h1>
     </header>
     <div class="reviews">
-      <div th:each="review: ${reviews}">
+      <div th:each="review: ${category.reviews}">
         <h3 class="reviews__title" th:text="${review.title}">Name</h3>
         <a th:text="${review.title}" th:href="|/reviews/${review.title}|">Review Name
         </a>

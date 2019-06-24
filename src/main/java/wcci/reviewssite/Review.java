@@ -22,17 +22,12 @@ public class Review {
 		
 	}
 	
-	public Review(long id, String title, String imageUrl, Category category, String content) {
-		this.id = id;
+	public Review(String title, String imageUrl, Category category, String content) {
 		this.title = title;
 		this.imageUrl = imageUrl;
 		this.category = category;
 		this.content = content;
 
-	}
-
-	public Review(long id) {
-		this.id = id;
 	}
 
 	public long getId() {

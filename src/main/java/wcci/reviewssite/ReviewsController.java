@@ -30,7 +30,7 @@ public class ReviewsController {
 	}
 	@PostMapping("/add")
 	public String addReview(Long id, String title, String imageUrl, Category category, String content) {
-		reviews.save(new Review(id, title, imageUrl, category, content));
+		reviews.save(new Review(title, imageUrl, category, content));
 		return "redirect:/reviews/";
 	}
 
