@@ -11,7 +11,7 @@ Category hodor = new Category();
 	
 	@Test
 	public void reviewShouldHaveAllValues() {
-		Review reviewTest = new Review(0, "title", "url", hodor, "con");
+		Review reviewTest = new Review("title", "url", hodor, "con");
 		String expectedReviewContent = reviewTest.getContent();
 		long expectedID = reviewTest.getId();
 		String expectedTitle = reviewTest.getTitle();
@@ -19,7 +19,7 @@ Category hodor = new Category();
 		Category expectedReviewCategory = reviewTest.getCategory();
 		assertEquals("con", expectedReviewContent);
 		assertEquals(hodor, expectedReviewCategory);
-		assertEquals("url", expectedImageUrl);
+		assertEquals("url", expectedImageUrl);	
 		assertEquals("title", expectedTitle);
 		assertEquals(0L, expectedID);
 
@@ -27,7 +27,7 @@ Category hodor = new Category();
 
 	@Test
 	public void reviewShouldHaveDifferentValues() {
-		Review reviewTest = new Review(2, "title2", "url2", hodor, "con2");
+		Review reviewTest = new Review("title2", "url2", hodor, "con2");
 		String expectedReviewContent = reviewTest.getContent();
 		long expectedID = reviewTest.getId();
 		String expectedTitle = reviewTest.getTitle();
