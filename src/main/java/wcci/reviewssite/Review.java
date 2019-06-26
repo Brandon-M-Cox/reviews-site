@@ -12,7 +12,7 @@ public class Review {
 	
 	@Id
 	@GeneratedValue
-	private long id;
+	private Long id;
 	
 	private String title;
 	private String imageUrl;
@@ -30,7 +30,7 @@ public class Review {
 
 	}
 
-	public long getId() {
+	public Long getId() {
 
 		return id;
 	}

@@ -24,8 +24,8 @@ public class ReviewsController {
 	}
 
 	@RequestMapping("/{id}")
-	public String getReview(@PathVariable("id") long id, Model model) {
-		model.addAttribute("review", reviews.findById(id));
+	public String getReview(@PathVariable("id") Long id, Model model) {
+		model.addAttribute("review", reviews.findById(id).get());
 		return "review";
 	}
 	@PostMapping("/add")
