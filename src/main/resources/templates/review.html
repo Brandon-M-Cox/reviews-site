@@ -20,8 +20,8 @@
           Category
         </p>
         <p class="reviews__content" th:text="${review.content}">Content</p>
-        <a class="back_to_categories__button" href="/categories/"
-          >Back To Categories
+        <a class="back_to_category__button" th:href="|/categories/${review.category.name}|"
+          >Back To Category
         </a>
       </div>
       <footer class="footer">

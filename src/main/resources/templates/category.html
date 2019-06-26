@@ -22,6 +22,16 @@
           </a>
         </div>
       </div>
+      <form class="review-form" action="/categories/add" method="POST">
+        <label class="review-form__field">Title: 
+          <input type="text" name="title" placeholder="Title"/>
+        </label>
+        <label class="review-form__field">Content: 
+         <input type="text" name="content" placeholder="Content"/>
+        </label>
+        <input type ="hidden" name="categoryName" th:value="${category.name}">
+        <button type="submit">Submit</button>
+      </form>
       <a class="back_to_categories_button" href="./">Back To categories</a>
       <footer class="footer">
         <small class="footer__copy"> &copy;2019 Reviews </small>
