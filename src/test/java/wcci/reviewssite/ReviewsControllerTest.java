@@ -38,7 +38,7 @@ public class ReviewsControllerTest {
 
 	@Test
 	public void shouldReturnOneReview() {
-		Review testReview = new Review(1,"Title1","imageUrl1", hodor, "content");
+		Review testReview = new Review("Title1","imageUrl1", hodor, "content");
 		List<Review > testReviews= Collections.singletonList(testReview);
 		Mockito.when(mockRepo.findAll()).thenReturn(testReviews);
 		underTest.getReviews(mockModel);
@@ -48,9 +48,9 @@ public class ReviewsControllerTest {
 
 	@Test
 	public void shouldReturnAllReviews() {
-		Review testReview1 = new Review(1,"Title1","imageUrl1", hodor, "content1");
-		Review testReview2 = new Review(2,"Title1","imageUrl1", hodor, "content2");
-		Review testReview3 = new Review(3,"Title1","imageUrl1", hodor, "content3");
+		Review testReview1 = new Review("Title1","imageUrl1", hodor, "content1");
+		Review testReview2 = new Review("Title1","imageUrl1", hodor, "content2");
+		Review testReview3 = new Review("Title1","imageUrl1", hodor, "content3");
 		List<Review > testReviews= Arrays.asList(testReview1,testReview2,testReview3);
 		Mockito.when(mockRepo.findAll()).thenReturn(testReviews);
 		underTest.getReviews(mockModel);

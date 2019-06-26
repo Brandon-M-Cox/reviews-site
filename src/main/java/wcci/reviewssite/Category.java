@@ -1,6 +1,7 @@
 package wcci.reviewssite;
 
 import java.util.Collection;
+import java.util.List;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -11,7 +12,7 @@ import javax.persistence.OneToMany;
 public class Category {
 	
 	@OneToMany(mappedBy = "category")
-	private Collection<Review> reviews;
+	private List<Review> reviews;
 	
 	private String name;
 	
