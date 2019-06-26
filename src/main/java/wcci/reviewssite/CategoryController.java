@@ -5,6 +5,7 @@ import javax.annotation.Resource;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
@@ -28,6 +29,15 @@ public class CategoryController {
 	public String findAllReviews(@PathVariable String name, Model model) {
 		model.addAttribute("category", categoryRepo.findByName(name));
 		return "category";
+	}
+	
+	@PostMapping("/add")
+	public String addReview(String title, String categoryName, String content) {
+		Category category = categoryRepo.findByName(categoryName);
+		Review newReview = new Review(title, "", category , content);
+		reviewRepo.save(newReview);
+		
+		return "redirect:/categories/" + categoryName ;
 	}
 
 //	@PostMapping("/add-category")
