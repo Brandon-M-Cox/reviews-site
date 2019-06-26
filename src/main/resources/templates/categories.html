@@ -17,7 +17,8 @@
         <h2 th:each="category: ${categories}">
             <!-- <h2 class="reviews__title" th:text="${review.title}">Title</h2> -->
             <a th:text= "${category.name}" th:href="|/categories/${category.name}|">Category Name </a></h2>          
-    </div>
+            <a class="back_to_reviews__button" href="/reviews/"> See All Reviews</a>
+          </div>
       <footer class="footer">
         <small class="footer__copy"> &copy;2019 Acquisitions Inc. </small>
       </footer>
