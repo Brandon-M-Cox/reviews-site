@@ -38,12 +38,12 @@ public class MvcReviewWebLayerTest {
 	@Mock
 	private Category mockCategory;
 	
-//	@Test
-//	public void shouldHitReviewEndPoint() throws Exception{
-//		Optional<Review> mockReviewOptional = Optional.of(mockReview);
-//		when(reviewRepository.findById(1L)).thenReturn(mockReviewOptional);
-//		this.mockMvc.perform(get("/reviews/1")).andDo(print()).andExpect(status().isOk());
-//	}
+	@Test
+	public void shouldHitReviewEndPoint() throws Exception{
+		Optional<Review> mockReviewOptional = Optional.of(mockReview);
+		when(reviewRepository.findById(1L)).thenReturn(mockReviewOptional);
+		this.mockMvc.perform(get("/reviews/1")).andDo(print()).andExpect(status().isOk());
+	}
 //	@Test
 //	public void shouldHitCategoryEndPoint() throws Exception{
 //		when(categoryRepository.findAll()).thenReturn(Arrays.asList());

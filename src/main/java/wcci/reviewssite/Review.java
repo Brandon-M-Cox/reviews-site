@@ -18,7 +18,7 @@ public class Review {
 	private String imageUrl;
 	private String content;
 	
-	protected Review () {
+	protected Review() {
 		
 	}
 	

@@ -45,18 +45,6 @@ public class CategoryControllerMvcTest {
 		when(categoryRepo.findAll()).thenReturn(categories);
 		mvc.perform(get("/categories")).andExpect(view().name(is("categories")));
 	}
-//	
-//	@Test
-//	public void addCategoryTest() throws Exception {
-//
-//		Category categoryToAdd = new Category("San Diego");
-//
-//		mvc.perform(post("/add-category").contentType(MediaType.APPLICATION_JSON).content(toJson(categoryToAdd)))
-//				.andExpect(status().is3xxRedirection());
-//	}
-//
-//	private String toJson(Category newCategory) {
-//		return newCategory.getName();
-//	}
 }
+
 
