@@ -22,6 +22,13 @@ a:hover {
   color: var(--dark);
 }
 
+.header__title {
+color: --var(--red);
+
+}
+
+
+
 section {
   color: var(--red);
 }
@@ -68,6 +75,7 @@ section {
 
 .category__title {
   margin-top: 2rem;
+
 }
 
 footer {
@@ -75,4 +83,13 @@ footer {
   color: grey;
   height: 5vh;
   padding-top: 0.5rem;
+
+}
+
+.back_to_categories_button {
+  margin: 1rem;
+}
+
+.review-form {
+  margin: 2rem;
 }

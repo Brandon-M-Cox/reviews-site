@@ -1,33 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link href="/stylesheet.css" rel="stylesheet" />
-    <title>Acquisitions, Inc.</title>
-  </head>
-  <header class="header">
-    <h1 class="header__title">WeCanCodeIT Review Repository</h1>
-  </header>
-  <div class="wrapper">
-    <body>
-      <div class="container">
-        <div class="reviews">
-          <h2 th:each="review: ${reviews}">
-            <a th:text="${review.title}" th:href="|/reviews/${review.id}|"
-              >Review Title</a
-            >
-          </h2>
-          <a class="See__All__cats__button" href="/categories/">
-            See All Categories</a
-          >
-        </div>
 
-        <footer class="footer">
-          <small class="footer__copy"> &copy;2019 Reviews </small>
-        </footer>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <link href="/stylesheet.css" rel="stylesheet" />
+  <title>Acquisitions, Inc.</title>
+</head>
+
+<body>
+  <div class="wrapper">
+    <section class="header">
+      <h1 class="header__title">
+        <a class="header__title" href="/categories/">WeCanCodeIT Review Repository</a>
+      </h1>
+    </section>
+    <div class="container">
+      <div class="reviews">
+        <h2 th:each="review: ${reviews}">
+          <a th:text="${review.title}" th:href="|/reviews/${review.id}|">Review Title</a>
+        </h2>
+        <a class="See__All__cats__button" href="/categories/">
+          See All Categories</a>
       </div>
-    </body>
-  </div>
+      <footer class="footer">
+        <small class="footer__copy"> &copy;2019 Reviews </small>
+      </footer>
+    </div>
+</body>
+</div>
+
 </html>
