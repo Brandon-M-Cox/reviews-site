@@ -16,21 +16,22 @@
       <h1 class="header__title">
         <a class="header__title" href="/categories/">WeCanCodeIT Review Repository</a>
       </h1>
+      <a class="back_to_category__button" th:href="|/categories/${review.category.name}|">Back To Category </a>
     </section>
     <div class="container">
       <div class="reviews">
         <h2 class="reviews__title" th:text="${review.title}">Title</h2>
-        <h3 class="reviews__ID" th:text="${review.id}">ID</h3>
         <p class="reviews__imageurl" th:text="${review.imageUrl}">ImageURL</p>
         <p class="reviews__category" th:text="${review.category.name}">
           Category
         </p>
         <p class="reviews__content" th:text="${review.content}">Content</p>
-        <a class="back_to_category__button" th:href="|/categories/${review.category.name}|">Back To Category
-        </a>
+        
+        
       </div>
       <footer class="footer">
         <small class="footer__copy"> &copy;2019 Reviews </small>
+       
       </footer>
     </div>
 </body>

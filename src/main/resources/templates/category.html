@@ -15,9 +15,10 @@
       <h1 class="header__title">
         <a class="header__title" href="/categories/">WeCanCodeIT Review Repository</a>
       </h1>
+      <a class="back_to_categories_button" href="./">Back To categories</a>
     </section>
     <div class="container">
-      <div class="reviews">
+      <div class="category__reviews">
         <div class="reviews__title" th:each="review: ${category.reviews}">
           <a th:text="${review.title}" th:href="|/reviews/${review.id}|">Review Name
           </a>
@@ -34,8 +35,9 @@
         <input type="hidden" name="categoryName" th:value="${category.name}" />
         <button type="submit">Submit</button>
       </form>
-      <a class="back_to_categories_button" href="./">Back To categories</a>
+      
       <footer class="footer">
+         
         <small class="footer__copy"> &copy;2019 Reviews </small>
       </footer>
     </div>
