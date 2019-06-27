@@ -1,5 +1,6 @@
 package wcci.reviewssite.integrationtests;
 
+
 import static org.mockito.Mockito.when;
 import static org.springframework.test.web.servlet.request.MockMvcRequestBuilders.get;
 import static org.springframework.test.web.servlet.result.MockMvcResultHandlers.print;
@@ -21,13 +22,13 @@ import wcci.reviewssite.Category;
 import wcci.reviewssite.CategoryRepository;
 import wcci.reviewssite.Review;
 import wcci.reviewssite.ReviewRepository;
-import wcci.reviewssite.ReviewsController;
+import wcci.reviewssite.CategoryController;
 
-@WebMvcTest(ReviewsController.class)
+@WebMvcTest(CategoryController.class)
 
 @RunWith(SpringRunner.class)
 
-public class MvcReviewWebLayerTest {
+public class MvcCategoryWebLayerTest {
 	
 	@Autowired
 	MockMvc mockMvc;
@@ -40,12 +41,12 @@ public class MvcReviewWebLayerTest {
 	@Mock
 	private Category mockCategory;
 	
+		
 	@Test
-	public void shouldReturnReview() throws Exception{
-		Optional<Review> mockReviewOptional = Optional.of(mockReview);
-		when(reviewRepository.findById(1L)).thenReturn(mockReviewOptional);
-		when(mockReview.getCategory()).thenReturn(mockCategory);
-		this.mockMvc.perform(get("/reviews/1")).andDo(print()).andExpect(status().isOk());
+	public void shouldHitCategoryEndPoint() throws Exception{
+		when(categoryRepository.findAll()).thenReturn(Arrays.asList());
+		this.mockMvc.perform(get("/categories/")).andDo(print()).andExpect(status().isOk());
+
 	}
 		
 }
