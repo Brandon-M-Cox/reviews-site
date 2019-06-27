@@ -5,26 +5,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <link href="/stylesheet.css" rel="stylesheet" />
-    <title>Document</title>
+    <title>Acquisitions, Inc.</title>
   </head>
-  <body>
-    <div class="wrapper">
-      <header class="header">
-        <h1 class="header__title">Acquisitions inc.</h1>
-        <h1>WeCanCodeIT Review Repository</h1>
-        <h2 th:each="review: ${reviews}">
-          <a th:text="${review.title}" th:href="|/reviews/${review.id}|"
-            >Review Title</a
+  <header class="header">
+    <h1 class="header__title">WeCanCodeIT Review Repository</h1>
+  </header>
+  <div class="wrapper">
+    <body>
+      <div class="container">
+        <div class="reviews">
+          <h2 th:each="review: ${reviews}">
+            <a th:text="${review.title}" th:href="|/reviews/${review.id}|"
+              >Review Title</a
+            >
+          </h2>
+          <a class="See__All__cats__button" href="/categories/">
+            See All Categories</a
           >
-        </h2>
-        <a class="See__All__cats__button" href="/categories/">
-          See All Categories</a
-        >
-      </header>
+        </div>
 
-      <footer class="footer">
-        <small class="footer__copy"> &copy;2019 Reviews </small>
-      </footer>
-    </div>
-  </body>
+        <footer class="footer">
+          <small class="footer__copy"> &copy;2019 Reviews </small>
+        </footer>
+      </div>
+    </body>
+  </div>
 </html>

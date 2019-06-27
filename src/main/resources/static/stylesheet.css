@@ -5,9 +5,74 @@
 }
 html {
   font: 20px/1 sans-serif;
+
+  --red: #9e2b25;
+  --mid: #51355a;
+  --dark: #2a0c4e;
+  --light: #f5f8de;
+}
+
+a {
+  text-decoration: none;
+  color: --var(--dark);
+  padding: 1rem;
+}
+
+a:hover {
+  color: var(--dark);
+}
+
+section {
+  color: var(--red);
 }
 
 .wrapper {
-  color: blue;
-  background-color: red;
+  background-color: var(--light);
+}
+.container {
+  margin: 0 auto;
+  max-width: 50rem;
+  width: 100%;
+  padding: 5rem;
+}
+
+.categories {
+  margin: 1rem;
+  display: inline-flex;
+  flex-direction: column;
+
+  align-content: center;
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  position: absolute;
+  width: 100%;
+  padding: 1rem 2rem;
+  border-bottom: 5px solid red;
+}
+
+.reviews {
+  display: inline-flexbox;
+  width: 75%;
+}
+
+.reviews__title {
+  flex: 50%;
+  padding: 2rem;
+  font-size: 2rem;
+}
+
+.category__title {
+  margin-top: 2rem;
+}
+
+footer {
+  position: fixed;
+  color: grey;
+  height: 5vh;
+  padding-top: 0.5rem;
 }
