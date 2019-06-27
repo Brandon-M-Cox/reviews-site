@@ -25,10 +25,10 @@ public class ApplicationTest {
 	
 	@Test
     public void shouldReturnDefaultMessage() throws Exception {
-        ResultActions getRequestResult = mockMvc.perform(get("/"));
+        ResultActions getRequestResult = mockMvc.perform(get("/categories/"));
         ResultActions response = getRequestResult.andDo(print());
         response.andExpect(status().isOk())
-                .andExpect(content().string(containsString("Review")));
+                .andExpect(content().string(containsString("categories")));
         
 	}
 
