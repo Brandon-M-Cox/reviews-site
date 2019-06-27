@@ -30,7 +30,7 @@
           <input type="text" name="title" placeholder="Title" />
         </label>
         <label class="review-form__field">Content:
-          <input type="text" name="content" placeholder="Content" cols="30" rows="8" />
+          <textarea type="text" cols="40" rows="5" name="content" placeholder="Content"></textarea>
         </label>
         <input type="hidden" name="categoryName" th:value="${category.name}" />
         <button type="submit">Submit</button>
